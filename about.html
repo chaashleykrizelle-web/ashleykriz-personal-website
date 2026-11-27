@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Me | Ashley</title>
+
+    <style>
+.about-photo {
+    width: 180px;
+    height: 220px;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+    margin: 15px auto; 
+}
+      
+        /* CUSTOM FONT */
+
+        @font-face {
+            font-family: 'Alagambe';
+            src: url('fonts/alagambe.otf') format('opentype');
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #FFF8F0;
+            color: #625D4E;
+            font-family: Georgia, serif;
+        }
+
+        /* TOP BAR */
+
+        .topbar {
+    background-color: #F8E5E1;
+    padding: 18px 10px;
+    text-align: center;
+    color: #9D7374;
+}
+
+.topbar p {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 16px;
+}
+
+        /* PAGE HEADER */
+
+        .page-header {
+            text-align: center;
+            padding: 45px 20px 25px;
+        }
+
+        .page-header h1 {
+            font-family: 'Alagambe', cursive;
+            font-size: clamp(65px, 10vw, 95px);
+            font-weight: normal;
+            color: #B77F83;
+            margin: 0;
+        }
+
+        .page-header p {
+            font-family: Georgia, serif;
+            font-size: 15px;
+            color: #81766A;
+            margin-top: 5px;
+        }
+
+        .divider {
+            width: 150px;
+            height: 2px;
+            background-color: #A9AE88;
+            margin: 20px auto;
+        }
+
+        /* MAIN CONTAINER */
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* SECTION CARDS */
+
+        .section {
+            background-color: #F8E5E1;
+            border: 1px solid #EBD5CE;
+            border-radius: 5px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-family: Georgia, serif;
+            font-size: 27px;
+            font-weight: normal;
+            color: #A87979;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        /* INTRODUCTION */
+
+        .intro-content {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .profile {
+            width: 190px;
+            height: 220px;
+            object-fit: cover;
+            border: 6px solid #FFF8F0;
+            outline: 1px solid #D9B9AD;
+        }
+
+        .intro-text {
+            flex: 1;
+        }
+
+        .intro-text h3 {
+            font-size: 24px;
+            color: #A87979;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .intro-text p {
+            font-size: 15px;
+            line-height: 1.9;
+            margin: 8px 0;
+        }
+
+        /* PERSONAL INFORMATION */
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .info-item {
+            background-color: #FFF8F0;
+            padding: 18px;
+            border-left: 4px solid #A9AE88;
+        }
+
+        .info-item h3 {
+            font-size: 17px;
+            color: #B77F83;
+            margin: 0 0 8px;
+        }
+
+        .info-item p {
+            font-size: 14px;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* FAVORITE QUOTE */
+
+        .quote {
+            background-color: #A9AE88;
+            color: #FFF8F0;
+            padding: 25px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .quote p {
+            font-size: 19px;
+            font-style: italic;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .quote span {
+            font-size: 13px;
+            display: block;
+            margin-top: 10px;
+        }
+
+        /* HOBBIES AND INTERESTS */
+
+        .hobby-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .hobby-item {
+            background-color: #FFF8F0;
+            padding: 20px;
+            border-bottom: 3px solid #D9B9AD;
+            text-align: center;
+        }
+
+        .hobby-item h3 {
+            font-size: 17px;
+            font-weight: normal;
+            color: #A87979;
+            margin: 0;
+        }
+
+        .hobby-item p {
+            font-size: 13px;
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
+        /* GOALS AND DREAMS */
+
+        .dream-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .dream-item {
+            background-color: #FFF8F0;
+            padding: 20px;
+        }
+
+        .dream-item h3 {
+            color: #A87979;
+            font-size: 18px;
+            margin-top: 0;
+        }
+
+        .dream-item p {
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 0;
+        }
+
+        /* NAVIGATION */
+
+        .navigation {
+            background-color: #A9AE88;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 18px 10px;
+            border-bottom: 6px dotted #F8E5E1;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: #FFF8F0;
+            font-family: Georgia, serif;
+            font-size: 21px;
+            padding: 8px 35px;
+            transition: 0.3s;
+        }
+
+        .navigation a:hover {
+            color: #B77F83;
+        }
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-family: Georgia, serif;
+            font-size: 14px;
+            color: #A17D75;
+        }
+
+        /* MOBILE RESPONSIVE */
+
+        @media (max-width: 650px) {
+
+            .intro-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile {
+                width: 180px;
+                height: 200px;
+            }
+
+            .info-grid,
+            .hobby-grid,
+            .dream-list {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding: 22px;
+            }
+
+            .navigation a {
+                padding: 10px 17px;
+                font-size: 18px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+
+    <div class="topbar">
+        <p>A little corner of my world.</p>
+    </div>
+
+
+    <!-- PAGE HEADER -->
+
+    <header class="page-header">
+
+        <h1>About Me</h1>
+
+        <div class="divider"></div>
+
+        <p>Get to know the person behind this little corner.</p>
+
+    </header>
+
+
+    <main class="container">
+
+
+        <!-- INTRODUCTION -->
+
+        <section class="section">
+
+            <h2 class="section-title">Introduction</h2>
+
+            <div class="intro-content">
+
+                <img src="images/about-profile.jpg"
+                  alt="My Profile"
+                  class="about-photo">
+                     
+
+                <div class="intro-text">
+
+                    <h3>Hello, I'm Ash!</h3>
+
+                  <p>
+My name is <strong>Ashley Krizelle I. Cha</strong>,
+but you can call me Ash or Kriz.
+I'm 14 years old, currently a
+Grade 9 student from section Tesla.
+                  </p>
+                  
+                    <p>
+                        A little world of my own, filled with dreams, curiosity, and endless possibilities. This is a glimpse of my little corner of the world.
+                    </p>
+
+                  
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PERSONAL INFORMATION -->
+
+        <section class="section">
+
+            <h2 class="section-title">
+                Personal Information
+            </h2>
+          
+
+            <div class="info-grid">
+<div class="info-item">
+<h3>Birthday</h3>
+<p>June 15, 2012</p>
+</div>
+              
+                <div class="info-item">
+                    <h3>Personality</h3>
+                    <p>
+                        An introvert who enjoys being
+                        alone, but becomes bubbly,
+                        talkative, and playful around
+                        people she's comfortable with.
+                    </p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Favorite Colors</h3>
+                    <p>
+                        Pink and every soft pastel shade.
+                    </p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Favorite Subject</h3>
+                    <p>Science</p>
+                </div>
+
+            </div>
+
+            <div class="quote">
+
+                <p>
+                    "Feel the fear and do it anyway."
+                </p>
+
+                <span>— A reminder to myself</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- HOBBIES AND INTERESTS -->
+
+        <section class="section">
+
+            <h2 class="section-title">
+                Hobbies & Interests
+            </h2>
+
+            <div class="hobby-grid">
+
+                <div class="hobby-item">
+                    <h3>Reading Books</h3>
+                    <p>
+                        Getting lost in stories
+                        and exploring different worlds.
+                    </p>
+                </div>
+
+                <div class="hobby-item">
+                    <h3>Movies & K-Dramas</h3>
+                    <p>
+                        Enjoying different stories,
+                        characters, and emotions.
+                    </p>
+                </div>
+
+                <div class="hobby-item">
+                    <h3>Listening to Music</h3>
+                    <p>
+                        Finding comfort and inspiration
+                        through music.
+                    </p>
+                </div>
+
+                <div class="hobby-item">
+                    <h3>Traveling & Exploring</h3>
+                    <p>
+                        Discovering new places,
+                        cultures, and experiences.
+                    </p>
+                </div>
+
+                <div class="hobby-item">
+                    <h3>ENHYPEN & Evan</h3>
+                    <p>
+                        Enjoying their music and
+                        finding happiness in being a fan.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- MY GOALS AND DREAMS -->
+
+        <section class="section">
+
+            <h2 class="section-title">
+                My Goals & Dreams
+            </h2>
+
+            <div class="dream-list">
+
+                <div class="dream-item">
+                    <h3>Future Ambition</h3>
+                    <p>
+                        I dream of becoming a psychologist
+                        someday, understanding people,
+                        their emotions, and the way
+                        the human mind works.
+                    </p>
+                </div>
+
+                <div class="dream-item">
+                    <h3>Things I Want to Achieve</h3>
+                    <p>
+                        I want to maintain high grades,
+                        improve myself academically,
+                        and become someone my younger
+                        self would be proud of.
+                    </p>
+                </div>
+
+                <div class="dream-item">
+                    <h3>Dream Destinations</h3>
+                    <p>
+                        Switzerland and South Korea.
+                        I hope to experience their
+                        beautiful scenery, culture,
+                        and unforgettable places.
+                    </p>
+                </div>
+
+                <div class="dream-item">
+                    <h3>Skills I Want to Learn</h3>
+                    <p>
+                        I want to learn painting
+                        and cooking, explore my
+                        creativity, and become
+                        more independent.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="navigation">
+
+        <a href="index.html">home</a>
+
+        <a href="about.html">about</a>
+
+        <a href="contact.html">contact</a>
+
+    </nav>
+
+</body>
+</html>

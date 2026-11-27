@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Me | Ashley</title>
+
+    <style>
+
+        /* CUSTOM FONT */
+
+        @font-face {
+            font-family: 'Alagambe';
+            src: url('fonts/alagambe.otf') format('opentype');
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #FFF8F0;
+            color: #625D4E;
+            font-family: Georgia, serif;
+        }
+
+        /* TOP BAR */
+
+        .topbar {
+    background-color: #F8E5E1;
+    padding: 18px 10px;
+    text-align: center;
+    color: #9D7374;
+}
+
+.topbar p {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 16px;
+}
+
+        /* PAGE HEADER */
+
+        .page-header {
+            text-align: center;
+            padding: 50px 20px 30px;
+        }
+
+        .page-header h1 {
+            font-family: 'Alagambe', cursive;
+            font-size: clamp(65px, 10vw, 95px);
+            font-weight: normal;
+            color: #B77F83;
+            margin: 0;
+        }
+
+        .divider {
+            width: 150px;
+            height: 2px;
+            background-color: #A9AE88;
+            margin: 20px auto;
+        }
+
+        .page-header p {
+            font-family: Georgia, serif;
+            font-size: 15px;
+            color: #81766A;
+            line-height: 1.8;
+        }
+
+        /* MAIN CONTAINER */
+
+        .container {
+            max-width: 850px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* CONTACT SECTION */
+
+        .contact-section {
+            background-color: #F8E5E1;
+            border: 1px solid #EBD5CE;
+            padding: 35px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-family: Georgia, serif;
+            font-size: 26px;
+            font-weight: normal;
+            color: #A87979;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+
+        .section-description {
+            text-align: center;
+            font-size: 14px;
+            color: #81766A;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        /* CONTACT CARDS */
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .contact-card {
+            background-color: #FFF8F0;
+            padding: 25px 15px;
+            text-align: center;
+            border-bottom: 4px solid #A9AE88;
+            transition: 0.3s;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            border-bottom-color: #B77F83;
+        }
+
+        .contact-card h3 {
+            font-family: Georgia, serif;
+            font-size: 19px;
+            font-weight: normal;
+            color: #B77F83;
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+
+        .contact-card p {
+            font-family: Georgia, serif;
+            font-size: 14px;
+            color: #625D4E;
+            line-height: 1.7;
+            overflow-wrap: anywhere;
+            margin: 0;
+        }
+
+        .contact-card a {
+            color: #625D4E;
+            text-decoration: none;
+        }
+
+        .contact-card a:hover {
+            color: #B77F83;
+            text-decoration: underline;
+        }
+
+        /* CLOSING MESSAGE */
+
+        .message {
+            background-color: #A9AE88;
+            padding: 25px;
+            text-align: center;
+            margin-top: 30px;
+            color: #FFF8F0;
+        }
+
+        .message h2 {
+            font-family: Georgia, serif;
+            font-size: 23px;
+            font-weight: normal;
+            margin-top: 0;
+        }
+
+        .message p {
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 0;
+        }
+
+        /* NAVIGATION */
+
+        .navigation {
+            background-color: #A9AE88;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 18px 10px;
+            border-bottom: 6px dotted #F8E5E1;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: #FFF8F0;
+            font-family: Georgia, serif;
+            font-size: 21px;
+            padding: 8px 35px;
+            transition: 0.3s;
+        }
+
+        .navigation a:hover {
+            color: #B77F83;
+        }
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-family: Georgia, serif;
+            font-size: 14px;
+            color: #A17D75;
+        }
+
+        /* MOBILE RESPONSIVE */
+
+        @media (max-width: 600px) {
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-section {
+                padding: 22px;
+            }
+
+            .navigation a {
+                font-size: 18px;
+                padding: 10px 17px;
+            }
+
+        }
+
+.social-links {
+    max-width: 450px;
+    margin: 35px auto;
+}
+
+.social-links h3 {
+    color: #657866;
+    margin-bottom: 20px;
+}
+
+.social-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background: #fff;
+    padding: 16px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    border: 1px solid #eadde2;
+}
+
+.social-icon {
+    width: 42px;
+    height: 42px;
+    background: #f7e9ed;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+    color: #657866;
+}
+
+.social-item strong {
+    display: block;
+    color: #657866;
+    margin-bottom: 5px;
+}
+
+.social-item a {
+    color: #b77d91;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+
+    <div class="topbar">
+
+        <p>A little corner of my world.</p>
+
+    </div>
+
+
+    <!-- PAGE HEADER -->
+
+    <header class="page-header">
+
+        <h1>Contact Me</h1>
+
+        <div class="divider"></div>
+
+        <p>
+            Have something to share?
+            Here's where you can find my contact information.
+        </p>
+
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="container">
+
+        <section class="contact-section">
+
+            <h2 class="section-title">
+                Let's Connect! 
+            </h2>
+
+            <p class="section-description">
+                Thank you for visiting my little corner!
+                Here are my contact details.
+            </p>
+
+
+            <!-- CONTACT INFORMATION -->
+
+            <div class="contact-grid">
+
+
+                <!-- CONTACT NUMBER -->
+
+                <div class="contact-card">
+
+                    <h3>Contact Number</h3>
+
+                    <p>09150360943</p>
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="contact-card">
+
+                    <h3>Email Address</h3>
+
+                    <p>
+                        <a href="mailto:chaashleykrizelle@gmail.com">
+                            chaashleykrizelle@gmail.com
+                        </a>
+                    </p>
+
+                </div>
+
+
+                <!-- LANDLINE -->
+
+                <div class="contact-card">
+
+                    <h3>Landline</h3>
+
+                    <p>Not Available</p>
+
+                </div>
+
+
+                <!-- WEBSITE -->
+
+                <div class="contact-card">
+
+                    <h3>Personal Website</h3>
+
+                    <p>https://ashleys-personal-website.netlify.app</p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+      
+
+    <h3>Find Me On</h3>
+
+    <div class="social-item">
+        <span class="social-icon">IG</span>
+        <div>
+            <strong>Instagram</strong>
+            <a href="https://www.instagram.com/ashie_kriz?fqnt=cmY4c3Q1NDBnZ3Y=" target="_blank">
+                Visit my Instagram →
+            </a>
+        </div>
+    </div>
+
+    <div class="social-item">
+        <span class="social-icon">f</span>
+        <div>
+            <strong>Facebook</strong>
+            <a href="https://www.facebook.com/ashley.cha.271778" target="_blank">
+                Visit my Facebook →
+            </a>
+        </div>
+    </div>
+
+
+        <!-- CLOSING MESSAGE -->
+
+        <section class="message">
+
+            <h2>Thank You for Visiting!</h2>
+
+            <p>
+                I appreciate you taking the time to explore
+                my website. Feel free to reach out
+                through my email. Have a lovely day!
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="navigation">
+
+        <a href="index.html">home</a>
+
+        <a href="about.html">about</a>
+
+        <a href="contact.html">contact</a>
+
+    </nav>
+
+
+</body>
+</html>
